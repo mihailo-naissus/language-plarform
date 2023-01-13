@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+
 <html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
-    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
+
     <link rel="stylesheet" href="styles.css">
-    <!-- Boxicons CDN Link -->
+
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+
     <div class="sidebar">
 
         <div class="logo-details">
@@ -80,7 +81,7 @@
             </li>
             <li class="profile">
                 <div class="profile-details">
-                    <!--<img src="profile.jpg" alt="profileImg">-->
+
                     <div class="name_job">
                         <div class="name">Anastasija G. S.</div>
                         <div class="job">Napravljeno sa &#x2764; prema jeziku</div>
@@ -90,32 +91,86 @@
             </li>
         </ul>
     </div>
+
+    </div>
+    <div class="horizontal-nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+
     <section class="home-section">
+
         <div class="text">Dashboard</div>
+
+
+        <div class="test-div">
+            <div class="div-num-2">
+                <h1 class="test-h1">Title</h1>
+
+                <p class="test-p" id="test-p-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor,
+                    magna a faucibus
+                    fermentum, risus
+                    velit convallis risus, sit amet ullamcorper magna augue et magna. </p>
+                <h2 class="test-h2">Subtitle</h2>
+                <p class="test-p">Vestibulum a nibh eget nunc euismod congue a id nisl. Sed commodo fringilla porttitor.
+                </p>
+                <table class="test-table">
+                    <tr>
+                        <th>Header 1</th>
+                        <th>Header 2</th>
+                    </tr>
+                    <tr>
+                        <td>Data 1</td>
+                        <td>Data 2</td>
+                    </tr>
+                    <tr>
+                        <td>Data 3</td>
+                        <td>Data 4</td>
+                    </tr>
+                </table>
+                <p class="test-p">Quisque pharetra, augue a convallis tincidunt, sapien mauris luctus magna, ut suscipit
+                    nulla risus at
+                    enim. </p>
+            </div>
+        </div>
     </section>
+
+
+
+
+
+
+
+    <!-- JAVASCRIPT CODE -->
+
+
     <script>
         let sidebar = document.querySelector(".sidebar");
         let closeBtn = document.querySelector("#btn");
-        let searchBtn = document.querySelector(".bx-search");
 
+        // toggle "open" class on sidebar and "sidebar-open" class on body
         closeBtn.addEventListener("click", () => {
             sidebar.classList.toggle("open");
-            menuBtnChange();//calling the function(optional)
+            document.querySelector("body").classList.toggle("sidebar-open");
+            menuBtnChange();
         });
 
-        searchBtn.addEventListener("click", () => { // Sidebar open when you click on the search iocn
-            sidebar.classList.toggle("open");
-            menuBtnChange(); //calling the function(optional)
-        });
-
-        // following are the code to change sidebar button(optional)
         function menuBtnChange() {
             if (sidebar.classList.contains("open")) {
-                closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+                closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
             } else {
-                closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");//replacing the iocns class
+                closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
             }
         }
+        const sidebarBtn = document.getElementById("btn");
+        sidebarBtn.addEventListener("click", function () {
+            document.querySelector("body").classList.toggle("sidebar-open");
+        });
     </script>
 </body>
 
