@@ -11,6 +11,7 @@
 
 
 .sidebar {
+    
     position: fixed;
     left: 0;
     top: 0;
@@ -23,6 +24,7 @@
 }
 
 .sidebar.open {
+    
     width: 250px;
 }
 
@@ -34,6 +36,7 @@
 }
 
 .sidebar .logo-details .icon {
+    
     opacity: 0;
     transition: all 0.5s ease;
 }
@@ -41,6 +44,7 @@
 
 
 .sidebar .logo-details .logo_name {
+    
     color: #fff;
     font-size: 20px;
     font-weight: 600;
@@ -54,6 +58,7 @@
 }
 
 .sidebar .logo-details #btn {
+    
     position: absolute;
     top: 50%;
     right: 0;
